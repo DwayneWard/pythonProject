@@ -1,9 +1,15 @@
-def read_json():
+import json
+
+
+def read_json(file_path):
     """
     Читает файл json и возвращает его содержимое
     :return: Данные в виде списка словарей
     """
-    pass
+    with open(file_path, encoding='utf-8') as f:
+        data = json.load(f)
+
+    return data
 
 
 def sort_data(data):
@@ -31,4 +37,3 @@ def mask_amount_number(amount_number):
     :return: Маскированную строку
     """
     pass
-
